@@ -19,8 +19,22 @@ def find_max():
         print(f"Max of List{index}: {maxx}, Min of list{index}: {minn}")
 
 
-
-
+def get_target_number():
+    target = 250
+    found_in_list_ = False
+    results = []
+    for index, lists_ in enumerate(lists, start=1):
+        for num in lists_:
+            if num == target:
+                found_in_list_ = True
+                break
+        results.append((index,lists_))
+    for index, lists_ in results:
+        if found_in_list_:
+            print(f"Number {target} found in list{index}")
+        print(f"Number {target} not found in list{index}")
+    
+    
 def avrg(lists):
     results = []
     for index, lists_ in enumerate(lists, start=1):
@@ -34,5 +48,6 @@ def avrg(lists):
 
 avrg(lists)
 find_max()
+get_target_number()
     
     
